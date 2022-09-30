@@ -17,10 +17,11 @@ const app = {
 
 
     handleEvens() {
+   
        window.onscroll = function() {
 //         console.log(featuresSection.offsetTop ,featuredSection.offsetTop,window.scrollY)
 // console.log(featuresSection,featuredSection)
-        var scrollTop = window.scrollY;
+        var scrollTop = window.pageYOffset;
         // ========changeHeader================ 
         if(scrollTop >= 100) {
             header.classList.add('scroll-header')
@@ -30,19 +31,21 @@ const app = {
         // ==========show line up============= 
         if(scrollTop >= 350) {
             lineUp.classList.add('line-up-show')
-        } else lineUp.classList.remove('line-up-show')
+        } else  lineUp.classList.remove('line-up-show')
         // ============Scrool active Link=================== 
         sections.forEach(function(section) {
+            var scrollTop2 = window.scrollY
             const offsetT = section.offsetTop - 50 ;
             const offsetH = section.offsetHeight ;
             const sectionId = section.getAttribute('id')
             
            
-            if(offsetT <= scrollTop && scrollTop <= offsetT + offsetH) {
-                
+            if(offsetT <= scrollTop2 && scrollTop2 <= offsetT + offsetH) {
+                if($('a[href*='+ sectionId + ']').classList.add('nav--active')){
+                    $('a[href*='+ sectionId + ']').classList.add('nav--active')
 
-                $('a[href*='+ sectionId + ']').classList.add('nav--active')
-              } else $('a[href*='+ sectionId + ']').classList.remove('nav--active')
+                }
+              } else if($('a[href*='+ sectionId + ']')) $('a[href*='+ sectionId + ']').classList.remove('nav--active')
             })
         }
        
@@ -85,7 +88,7 @@ const app = {
 
     start() {
         this.handleEvens()
-    }
+    },
 
 }
 
@@ -122,5 +125,5 @@ sr.reveal('.home__title, .about, .popular, .features, .featured, .offer, .logo,f
 sr.reveal('.home__sub_title',{delay:500})
 sr.reveal('.home__name-wrap',{delay:600})
 sr.reveal('.home__img',{delay:800})
-sr.reveal('.home__datas-item',{delay:900,interval:30.0,origin:'bottom'})
+sr.reveal('.home__datas-item',{delay:900,interval:300,origin:'bottom'})
 sr.reveal('.home-start--wrap',{delay:1000,origin:'bottom'})
