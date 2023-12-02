@@ -46,7 +46,7 @@ let activeLink = function() {
    Array.from( $$('.nav__item-link')).forEach(element => {
        if(element.matches('.active-link')){
            element.classList.remove('active-link')
-
+            
        }
         
     });

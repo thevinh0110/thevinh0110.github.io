@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Responsive portfolio website</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
+     <!--=============== font-awesome ===============-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+          <!--=============== SCROLL REVEAL ===============-->
+          <script src="https://unpkg.com/scrollreveal"></script>
+        <!--=============== SWIPER CSS ===============-->
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+      />
+        <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+</head>
+<body class="">  
+   <header>
+    <div class="icon-theme"><i class="fa-regular fa-sun"></i></div>
+   </header>
+   <div class="main">
+    <div class="main__container">
+      <div class="section ">
+        <div class="section__title">Weather <i class="fa-solid fa-umbrella"></i> Forecast</div>
+        <div class="weather_forecast">
+          <div class="container_weather">
+
+            <div class="search-box">
+              <i class="fa-solid fa-location-dot"></i>
+              <input type="text" placeholder="enter your city">
+              <button class="fa-solid fa-magnifying-glass"></button>
+            </div>
+            <p class="city_title"> Ha Noi</p>
+
+            <div class="weather_box">
+              <div class="box">
+                <div class="info_weather">
+                  <div class="weather">
+                    <img src="./assets/images/cloud.png" alt="">
+                    <p class="temporature">0<span>℃</span>
+                    </p>
+                    <p class="description">Broken Clouds</p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="weather_detail">
+              <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                  <div class="infor_humidity">
+                    <span>0%</span>
+                  </div>
+                  <p>Humidity</p>
+                </div>
+              </div>
+              <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                  <div class="infor_wind">
+                    <span>0Km/h</span>
+                  </div>
+                  <p>Wind Speed></p>
+                </div>
+            </div>   
+          </div>
+          <div class="not_found">
+            <img src="./assets/images/404.png" alt="">
+            <p>oops!location not found!</p>
+          </div>
+
+
+        </div>
+      
+      </div>
+      <div class="section">
+        <div class="section__title"><span><i class="fa-solid fa-shield-halved"></i></span> Smart <span><i class="fa fa-home" aria-hidden="true"></i></span> Home<span><i class="fa-solid fa-shield-halved"></i></span></div>
+        <div class="section__body">
+          <div class="section__body__environment">
+              <div class="section__body__environment-tem">
+                <div class="section__body__environment-tem-title">Temperature</div>
+                <div class="section__body__environment-tem-number">0°C</div>
+                <div class="section__body__environment-tem-icon"><i class="fa fa-thermometer-empty" aria-hidden="true"></i></div>
+              </div>
+              <div class="section__body__environment-humi">
+                <div class="section__body__environment-humi-title">Humidity</div>
+                <div class="section__body__environment-humi-number">0%</div>
+                <div class="section__body__environment-humi-icon"><i class="fa fa-tint" aria-hidden="true"></i></div>
+              </div>
+              <div class="section__body__environment-ldr">
+                <div class="section__body__environment-ldr-title">LDR</div>
+                <div class="section__body__environment-ldr-number">0</div>
+                <div class="section__body__environment-ldr-icon"><i class="fa-solid fa-sun"></i></div>
+              </div>
+          </div>
+          <div class="section__body__device">
+            <div class="section__body__device-light">
+              <div class="section__body__device-container">
+                <div class="section__body__device-icon"><i class="fa-regular fa-lightbulb"></i></div>
+                <div class="section__body__device-title">Light</div>
+              </div>
+              <div class="section__body__device-light-btn btn-off"><i class="fa fa-toggle-off" aria-hidden="true"></i></div>
+
+            </div>
+            <div class="section__body__device-fan">
+              <div class="section__body__device-container">
+                <div class="section__body__device-icon"><i class="fa-solid fa-fan"></i></div>
+                <div class="section__body__device-title">Fan</div>
+              </div>
+              <div class="section__body__device-fan-btn btn-off"><i class="fa fa-toggle-off" aria-hidden="true"></i></div>
+
+            </div>
+            <div class="section__body__device-tv">
+              <div class="section__body__device-container">
+                <div class="section__body__device-icon"><i class="fa-solid fa-tv"></i></div>
+                <div class="section__body__device-title">TV</div>
+              </div>
+              <div class="section__body__device-tv-btn btn-off"><i class="fa fa-toggle-off" aria-hidden="true"></i></div>
+            </div>
+            <div class="section__body__device-ac">
+              <div class="section__body__device-container">
+                <div class="section__body__device-icon"><i class="fa-regular fa-snowflake"></i></div>
+                <div class="section__body__device-title">AC</div>
+              </div>
+              <div class="section__body__device-ac-btn btn-off"><i class="fa fa-toggle-off" aria-hidden="true"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   <div id="toast">
+    
+   </div>
+   <footer>
+
+   </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!--=============== MIXITUP FILTER ===============-->
+    <script src="./assets/js/mixitup.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/weather.js"></script>
+
+
+</body>
+</html>
