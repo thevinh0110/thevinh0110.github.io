@@ -26,6 +26,7 @@
 </head>
 <body class="">  
    <header>
+    <a class="header_icon" href="#">Smart<i class="fa-solid fa-shield-halved"></i>Home</a>
     <div class="icon-theme"><i class="fa-regular fa-sun"></i></div>
    </header>
    <div class="main">
@@ -33,8 +34,8 @@
       <div class="section ">
         <div class="section__title">Weather <i class="fa-solid fa-umbrella"></i> Forecast</div>
         <div class="weather_forecast">
-          <div class="container_weather">
-
+          <div class="container_weather active">
+            <div class="btn-up"><i class="fa-solid fa-arrow-up"></i></div>
             <div class="search-box">
               <i class="fa-solid fa-location-dot"></i>
               <input type="text" placeholder="enter your city">
@@ -105,35 +106,101 @@
               </div>
           </div>
           <div class="section__body__device">
-            <div class="section__body__device-light">
-              <div class="section__body__device-container">
-                <div class="section__body__device-icon"><i class="fa-regular fa-lightbulb"></i></div>
-                <div class="section__body__device-title">Light</div>
-              </div>
-              <div class="section__body__device-light-btn btn-off"><i class="fa fa-toggle-off" aria-hidden="true"></i></div>
+            
+          </div>
 
-            </div>
-            <div class="section__body__device-fan">
-              <div class="section__body__device-container">
-                <div class="section__body__device-icon"><i class="fa-solid fa-fan"></i></div>
-                <div class="section__body__device-title">Fan</div>
+        </div>
+      </div>
+      <div class="section section_otherDevice">
+        <div class="section__title">other <i class="fa-solid fa-house-laptop"></i> devices</div>
+        <div class="section__body">
+          <ul class="otherDevice_filter">
+            <li class="otherDevice_list_item active-item" data-filter="all">All</li>
+            <li class="otherDevice_list_item" data-filter=".floor1">Floor 1</li>
+            <li class="otherDevice_list_item" data-filter=".floor2">Floor 2</li>
+            <li class="otherDevice_list_item" data-filter=".floor3">Floor 3</li>
+          </ul>
+          <div class="otherDevice__mix">
+            <div href="" style="order:1;"class="otherDevice_cart  mix floor1">
+              <div class="otherDevice_item">
+                <div class="otherDevice_item_icon"><i class="fa-solid fa-radio"></i></div>
+                <div class="otherDevice_item_title">Radio</div>
               </div>
-              <div class="section__body__device-fan-btn btn-off"><i class="fa fa-toggle-off" aria-hidden="true"></i></div>
-
+              <div class="otherDevice_item_place">Floor 1</div>
+              <div class="btn_add_device"><i class="fa-solid fa-plus"></i></div>
+              
             </div>
-            <div class="section__body__device-tv">
-              <div class="section__body__device-container">
-                <div class="section__body__device-icon"><i class="fa-solid fa-tv"></i></div>
-                <div class="section__body__device-title">TV</div>
+            <div href="" style="order:2 ;" class="otherDevice_cart mix floor2">
+              <div class="otherDevice_item">
+                <div class="otherDevice_item_icon"><i class="fa-regular fa-lightbulb"></i></div>
+                <div class="otherDevice_item_title">Light</div>
               </div>
-              <div class="section__body__device-tv-btn btn-off"><i class="fa fa-toggle-off" aria-hidden="true"></i></div>
+              <div class="otherDevice_item_place">Floor 2</div>
+              <div class="btn_add_device"><i class="fa-solid fa-plus"></i></div>
+              
             </div>
-            <div class="section__body__device-ac">
-              <div class="section__body__device-container">
-                <div class="section__body__device-icon"><i class="fa-regular fa-snowflake"></i></div>
-                <div class="section__body__device-title">AC</div>
+            <div href="" style="order:3 ;" class="otherDevice_cart mix floor3">
+              <div class="otherDevice_item">
+                <div class="otherDevice_item_icon"><i class="fa-solid fa-robot"></i></div>
+                <div class="otherDevice_item_title">Robot</div>
               </div>
-              <div class="section__body__device-ac-btn btn-off"><i class="fa fa-toggle-off" aria-hidden="true"></i></div>
+              <div class="otherDevice_item_place">Floor 3</div>
+              <div class="btn_add_device"><i class="fa-solid fa-plus"></i></div>
+              
+            </div>
+            <div href="" style="order:4 ;" class="otherDevice_cart mix floor3">
+              <div class="otherDevice_item">
+                <div class="otherDevice_item_icon"><i class="fa-solid fa-bath"></i></div>
+                <div class="otherDevice_item_title">Bath</div>
+              </div>
+              <div class="otherDevice_item_place">Floor 3</div>
+              <div class="btn_add_device"><i class="fa-solid fa-plus"></i></div>
+              
+            </div>
+            <div href="" style="order:5 ;" class="otherDevice_cart mix floor3">
+              <div class="otherDevice_item">
+                <div class="otherDevice_item_icon"><i class="fa-solid fa-toilet"></i></div>
+                <div class="otherDevice_item_title">Toilet</div>
+              </div>
+              <div class="otherDevice_item_place">Floor 3</div>
+              <div class="btn_add_device"><i class="fa-solid fa-plus"></i></div>
+              
+            </div>
+            <div href="" style="order:6 ;" class="otherDevice_cart mix floor2">
+              <div class="otherDevice_item">
+                <div class="otherDevice_item_icon"><i class="fa-solid fa-sink"></i></div>
+                <div class="otherDevice_item_title">Sink</div>
+              </div>
+              <div class="otherDevice_item_place">Floor 2</div>
+              <div class="btn_add_device"><i class="fa-solid fa-plus"></i></div>
+              
+            </div>
+            <div href="" style="order:7 ;" class="otherDevice_cart mix floor1">
+              <div class="otherDevice_item">
+                <div class="otherDevice_item_icon"><i class="fa-solid fa-video"></i></div>
+                <div class="otherDevice_item_title">Camera</div>
+              </div>
+              <div class="otherDevice_item_place">Floor 1</div>
+              <div class="btn_add_device"><i class="fa-solid fa-plus"></i></div>
+              
+            </div>
+            <div href="" style="order:8 ;" class="otherDevice_cart mix floor1">
+              <div class="otherDevice_item">
+                <div class="otherDevice_item_icon"><i class="fa-solid fa-wifi"></i></div>
+                <div class="otherDevice_item_title">Wifi</div>
+              </div>
+              <div class="otherDevice_item_place">Floor 1</div>
+              <div class="btn_add_device"><i class="fa-solid fa-plus"></i></div>
+              
+            </div>
+            <div href="" style="order:9 ;" class="otherDevice_cart mix floor3">
+              <div class="otherDevice_item">
+                <div class="otherDevice_item_icon"><i class="fa-solid fa-ghost"></i></div>
+                <div class="otherDevice_item_title">ghost</div>
+              </div>
+              <div class="otherDevice_item_place">Floor 3</div>
+              <div class="btn_add_device"><i class="fa-solid fa-plus"></i></div>
+              
             </div>
           </div>
         </div>

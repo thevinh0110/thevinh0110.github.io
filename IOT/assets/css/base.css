@@ -123,7 +123,7 @@
     font-size: 40px;
     color: var(--first-color);
     margin-bottom: 2rem;
-    
+    text-transform: capitalize;
     font-weight: var(--font-semibold);
   }
   
