@@ -70,55 +70,55 @@ var otherDevices_data =[
     "id": 9
   }
 ]
-  var brr =[]
-const df_devicesApI =' http://localhost:3000/defaultDevices'
-const other_devicesApi = 'http://localhost:3000/otherDevices'
-function render() {
+  
+// const df_devicesApI =' http://localhost:3000/defaultDevices'
+// const other_devicesApi = 'http://localhost:3000/otherDevices'
+// function render() {
     
-    fetch(df_devicesApI)
-    .then(response => response.json())
-    .then(df_devices => {
+//     fetch(df_devicesApI)
+//     .then(response => response.json())
+//     .then(df_devices => {
 
-        var htmls = df_devices.map((device,index) => {
-          brr = [...brr,...[device]]
+//         var htmls = df_devices.map((device,index) => {
+//           brr = [...brr,...[device]]
           
-            return `<div class="section__body__device_item">
-            <div class="section__body__device-container">
-              <div class="section__body__device-icon"><i class="${device.icon}"></i></div>
-              <div class="section__body__device-title">${device.name}</div>
-            </div>
-            <div onclick="on_offDevice(event,${index})" class="section__body__device-btn btn-off "><i class="fa fa-toggle-off" aria-hidden="true"></i></div>
+//             return `<div class="section__body__device_item">
+//             <div class="section__body__device-container">
+//               <div class="section__body__device-icon"><i class="${device.icon}"></i></div>
+//               <div class="section__body__device-title">${device.name}</div>
+//             </div>
+//             <div onclick="on_offDevice(event,${index})" class="section__body__device-btn btn-off "><i class="fa fa-toggle-off" aria-hidden="true"></i></div>
 
-          </div>`
-        })
+//           </div>`
+//         })
         
-        var aaa = JSON.stringify(df_devices)
-        console.log(aaa)
-        console.log(JSON.parse(aaa))
-        htmls = htmls.join('')
-        bodyDfDevices.innerHTML = htmls
+//         var aaa = JSON.stringify(df_devices)
+//         console.log(aaa)
+//         console.log(JSON.parse(aaa))
+//         htmls = htmls.join('')
+//         bodyDfDevices.innerHTML = htmls
       
-    })
+//     })
 
-    fetch(other_devicesApi)
-    .then(response => response.json())
-    .then(otherDevices => {
-        var htmls = otherDevices.map((device,index) => {
-          return `
-          <div href="" style="order:${device.id};"class="otherDevice_cart  mix ${device.position}">
-          <div class="otherDevice_item">
-            <div class="otherDevice_item_icon"><i class="${device.icon}"></i></div>
-            <div class="otherDevice_item_title">${device.name}</div>
-          </div>
-          <div class="otherDevice_item_place">${device.position}</div>
-          <div class="btn_add_device"><i class="fa-solid fa-plus"></i></div>
+//     fetch(other_devicesApi)
+//     .then(response => response.json())
+//     .then(otherDevices => {
+//         var htmls = otherDevices.map((device,index) => {
+//           return `
+//           <div href="" style="order:${device.id};"class="otherDevice_cart  mix ${device.position}">
+//           <div class="otherDevice_item">
+//             <div class="otherDevice_item_icon"><i class="${device.icon}"></i></div>
+//             <div class="otherDevice_item_title">${device.name}</div>
+//           </div>
+//           <div class="otherDevice_item_place">${device.position}</div>
+//           <div class="btn_add_device"><i class="fa-solid fa-plus"></i></div>
           
-        </div>
-          `
-      })
-    })
+//         </div>
+//           `
+//       })
+//     })
 
-}
+// }
 
 
 function toast({ title = "", message = "", type = "info", duration = 3000 }) {
@@ -261,16 +261,6 @@ function add_removeDevice() {
     })
     
   })
-  // btnRemoveDevices.forEach((el,index) => {
-  //   el.addEventListener('click',() =>{
-  //     var itemSelected = $$('.section__body__device_itemSelected')
-  //     console.log(itemSelected)
-  //     itemSelected[index].remove
-  //     btnAddDevices[index].style.display = 'block'
-  //     bodyOtherDevice.appendChild(otherDevices[index])
-  //   })
-    
-  // })
 }
 function removeItem(index) {
   var itemSelected = $$('.section__body__device_itemSelected')
@@ -289,7 +279,7 @@ function handleClicks() {
   add_removeDevice()
 }
 function start() {
-    render()
+   
     
     handleClicks()
 }
