@@ -17,6 +17,9 @@
 
 /* mobile */
 @media (max-width:739px){
+    #toast{
+        right: 16px;
+    }
     .section__title {
         font-size: 32px;
     }
