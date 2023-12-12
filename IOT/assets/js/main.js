@@ -12,9 +12,10 @@ let body = $('body')
 let controlbtn = $$('.otherDevice_list_item')
 let btnAddDevices = $$('.btn_add_device')
 let btnRemoveDevices = $$('.btn_remove_device')
-let otherDevices = $$('.otherDevice_cart')
 let bodyOtherDevice = $('.otherDevice__mix')
-var otherDevices_data =[
+let otherDevices = $$('.otherDevice_cart')
+
+var otherDevices_data =  [
   {
     "id": 1,
     "name": "radio",
@@ -46,8 +47,8 @@ var otherDevices_data =[
     "id": 5
   },
   {
-    "name": "camera",
-    "icon": "fa-solid fa-video",
+    "name": "toilet",
+    "icon": "fa-solid fa-toilet",
     "position": "floor1",
     "id": 6
   },
@@ -243,11 +244,21 @@ function controlBtnActive() {
 }
 
 function add_removeDevice() {
+
   btnAddDevices.forEach((el,index) => {
     el.addEventListener('click',() =>{
-      otherDevices[index].remove()
+
+      if(!bodyDfDevices.contains(document.querySelector(`.data-item-${index}`))) {
+           // otherDevices[index].remove()
+          otherDevices[index].style.display = 'none'
+      // arr.splice(index,1)
+      // console.log(arr)
+      // arr.forEach(element=> {
+      //   bodyOtherDevice.appendChild(element)
+      // })
+      // mixFloor()
       var html = document.createElement('div')
-      html.classList.add('section__body__device_item','section__body__device_itemSelected')
+      html.classList.add('section__body__device_item','section__body__device_itemSelected',`data-item-${index}`)
       html.setAttribute("data-index",index)
       html.innerHTML = `
       <div class="section__body__device-container">
@@ -258,19 +269,28 @@ function add_removeDevice() {
       <div onclick="removeItem(${index})" class="btn_remove_device"><i class="fa-solid fa-minus"></i></div>   
 `
       bodyDfDevices.appendChild(html)
+      } else {
+        toast({ title : `${otherDevices_data[index].name}`, message : "has been selected", type : "info", duration :3000 })
+      }
+   
     })
     
   })
 }
 function removeItem(index) {
   var itemSelected = $$('.section__body__device_itemSelected')
-  itemSelected.forEach(el => {
+  var indexx
+  itemSelected.forEach((el,id) => {
     var dataIndex = el.getAttribute("data-index")
-    if(dataIndex ==index) {
+    if(dataIndex == index) {
+      indexx = dataIndex
       el.remove()
+      // bodyOtherDevice.appendChild(otherDevices[indexx])
+      otherDevices[indexx].style.display = '' 
+      // mixFloor()
+      
     }
-  })
-  bodyOtherDevice.appendChild(otherDevices[index])
+  })  
 }
 
 function handleClicks() {
@@ -279,19 +299,21 @@ function handleClicks() {
   add_removeDevice()
 }
 function start() {
-   
-    
+    mixFloor()
     handleClicks()
 }
 start()
 // Toast function
-let mixerDevice = mixitup('.otherDevice__mix', {
-  selectors: {
-      target: '.otherDevice_cart'
-  },
-  animation: {
-      duration: 300
-  }
-});
+function mixFloor() {
+  let mixerDevice = mixitup('.otherDevice__mix', {
+    selectors: {
+        target: '.otherDevice_cart'
+    },
+    animation: {
+        duration: 300
+    }
+  });
+}
+
 
 
