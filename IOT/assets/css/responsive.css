@@ -17,5 +17,51 @@
 
 /* mobile */
 @media (max-width:739px){
-  
+    .section__title {
+        font-size: 32px;
+    }
+    .container_weather {
+        max-width: 80%;
+    }
+    .search-box input {
+        font-size: 20px;
+    }
+    .btn-up {
+        bottom: 8px;
+        right: -32px;
+    }
+    .section__body {
+        max-width: 90%;
+    }
+    .section__body__environment {
+      display: grid;
+      grid-template-columns: 100%;
+    }
+    .section__body__environment-item {
+        width: auto;
+        margin-bottom: 16px;
+    }
+    .section__body__device {
+        grid-template-columns: 80%;
+        justify-content: center;
+    }
+    .otherDevice_list_item {
+        width: 90px;
+        font-size: 20px;
+        margin: 0 4px 0;
+    }
+    .otherDevice__mix {
+       display: grid;
+       grid-template-columns: 50% 50%;
+    }
+    .otherDevice_cart {
+        width: 96%;
+        margin: 0 4px 8px;
+    }
+    .otherDevice_item_icon {
+        font-size: 42px;
+    }
+    .otherDevice_item_title {
+        font-size: 20px;
+    }
 }

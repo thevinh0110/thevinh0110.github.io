@@ -134,7 +134,10 @@
     font-size: 20px;
     color: var(--text-color-light);
   }
-  
+.center {
+  display: flex;
+  justify-content: center;
+}
  
 .modal{
     display: none;
