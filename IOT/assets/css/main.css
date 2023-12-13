@@ -418,7 +418,8 @@ justify-content: space-between;
     background-color: var(--container-color);
     border-radius: 2px;
     padding: 20px 0;
-    min-width: 400px;
+    /* min-width: 400px; */
+    width: 400px;
     max-width: 450px;
     border-left: 4px solid;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
@@ -585,7 +586,7 @@ justify-content: space-between;
   
   @keyframes fadeOut {
     to {
-      opacity: 0;
+      opacity:0;
     }
   }
   

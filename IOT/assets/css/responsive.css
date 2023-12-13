@@ -11,14 +11,18 @@
 }
 /* tablet */
 @media (min-width:740px) and (max-width:1023px){
-  
+    
     
 }
 
 /* mobile */
 @media (max-width:739px){
     #toast{
-        right: 16px;
+        right: 12px;
+        
+    }
+    .toast {
+        width: 350px;
     }
     .section__title {
         font-size: 32px;
@@ -35,6 +39,7 @@
     }
     .section__body {
         max-width: 90%;
+        padding: 20px;
     }
     .section__body__environment {
       display: grid;
@@ -66,5 +71,22 @@
     }
     .otherDevice_item_title {
         font-size: 20px;
+    } 
+    .not_found p {
+        font-size: 24px;
     }
+    .btn_add_device,
+    .btn_remove_device {
+        font-size: 24px;
+        top: 12px;
+        right: 12px;
+    }
+    .weather_box {
+        top: 150px
+    }
+    .weather_detail .humidity i,
+    .weather_detail .wind i {
+        font-size: 32px;
+    }
+    
 }

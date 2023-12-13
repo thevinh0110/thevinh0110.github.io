@@ -128,10 +128,10 @@ function toast({ title = "", message = "", type = "info", duration = 3000 }) {
       const toast = document.createElement("div");
   
       // Auto remove toast
-      const autoRemoveId = setTimeout(function () {
-        main.removeChild(toast);
-      }, duration + 1000);
-  
+        const autoRemoveId = setTimeout(function () {
+          main.removeChild(toast);
+        }, duration + 1000);
+    
       // Remove toast when clicked
       toast.onclick = function (e) {
         if (e.target.closest(".toast__close")) {
