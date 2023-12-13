@@ -54,9 +54,14 @@
         justify-content: center;
     }
     .otherDevice_list_item {
-        width: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
         font-size: 20px;
         margin: 0 4px 0;
+        padding: 4px 16px 4px;
+
     }
     .otherDevice__mix {
        display: grid;
