@@ -315,5 +315,68 @@ function mixFloor() {
   });
 }
 
+ScrollReveal().reveal('.section_weather', {
+  origin: 'right',
+  duration: 2000,
+  distance: '100px',
+  delay : 500,
+  opacity:0,
+  viewOffset:{
+    bottom:100
+},
+afterReveal: function(el) {
+  ScrollReveal().clean(el);
+}
+});
+ScrollReveal().reveal('.section_smartHome', { 
+  origin: 'left',
+  duration: 2000,
+  distance: '100px',
+  delay : 500,
+  opacity:0,
+  viewOffset:{
+    bottom:100
+},
+});
+function haha() {
+  console.log(otherDevices)
+  Array.from(otherDevices).forEach(el => {
+    el.style.visibility = 'visible'
+  })
+  ScrollReveal().reveal('.otherDevice_cart', { 
+    origin: 'bottom',
+    interval: 200,
+    duration: 1000,
+    distance:'',
+    delay : 500,
+    opacity:0,
+    viewOffset:{
+      bottom:60
+  },
+  });
+}
+
+ScrollReveal().reveal('.section_otherDevice', { 
+  origin: 'right',
+  duration: 2000,
+  distance:'100px',
+  delay : 500,
+  opacity:0,
+  viewOffset:{
+    bottom:60
+},
+ afterReveal: haha
+});
+
+ScrollReveal().reveal('.section_chart', { 
+  origin: 'bottom',
+  duration: 2000,
+  distance:'100%',
+  delay : 500,
+  opacity:0,
+  viewOffset:{
+    bottom:100
+},
+});
 
 

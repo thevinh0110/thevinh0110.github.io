@@ -15,6 +15,10 @@ body.theme-light{
   
 
 }
+#myChart {
+    width: 100%;
+    transition: all 1.8s ease;
+}
 header {
     height: var(--header-height);
     background-color: var(--container-color);
@@ -525,6 +529,7 @@ justify-content: space-between;
 /* width: 30%; */
 }
 .otherDevice_cart {
+    visibility: hidden;
     position: relative;
     padding: 26px;
     width: 32%;
