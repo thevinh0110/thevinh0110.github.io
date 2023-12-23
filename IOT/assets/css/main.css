@@ -577,6 +577,9 @@ justify-content: space-between;
     margin-top: 28px;
     text-transform: capitalize;
 }
+footer {
+    height: 200px;
+}
   
   @keyframes slideInLeft {
     from {

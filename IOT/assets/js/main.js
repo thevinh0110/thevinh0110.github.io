@@ -339,21 +339,23 @@ ScrollReveal().reveal('.section_smartHome', {
 },
 });
 function haha() {
-  console.log(otherDevices)
-  Array.from(otherDevices).forEach(el => {
-    el.style.visibility = 'visible'
-  })
-  ScrollReveal().reveal('.otherDevice_cart', { 
-    origin: 'bottom',
-    interval: 200,
-    duration: 1000,
-    distance:'',
-    delay : 500,
-    opacity:0,
-    viewOffset:{
-      bottom:60
-  },
-  });
+    setTimeout(() => {
+      Array.from(otherDevices).forEach(el => {
+        el.style.visibility = 'visible'
+      })
+    },500)
+
+    ScrollReveal().reveal('.otherDevice_cart', { 
+      origin: 'bottom',
+      interval: 200,
+      duration: 1000,
+      distance:'',
+      delay : 500,
+      opacity:0,
+      viewOffset:{
+        bottom:60
+    },
+    });
 }
 
 ScrollReveal().reveal('.section_otherDevice', { 
